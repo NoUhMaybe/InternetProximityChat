@@ -50,16 +50,24 @@
   </style>
 </head>
 <body>
+  <div id="name-prompt" style="padding: 10px;">
+  <label>Enter your name:</label>
+  <input id="name-input" />
+  <button id="name-btn">Join</button>
+</div>
+  <div id="user-count" style="padding:8px; border-bottom:1px solid #ccc;"></div>
+  <div id="room-selector" style="padding: 8px; border-bottom: 1px solid #ccc;"></div>
   <ul id="messages"></ul>
-  <div id="input-area">
+  <div id="input-area" style="display: none;">
     <input id="input" placeholder="Type a message..." autocomplete="off" />
     <button id="send-btn">Send</button>
   </div>
 
-  <script>
-    const room = "{{ domain }}";
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/socket.io@4.7.2/client-dist/socket.io.min.js"></script>
-  <script src="/static/chat.js"></script>
+<script>
+  const ROOM_NAME = "{{ domain }}";
+</script>
+<script src="https://cdn.jsdelivr.net/npm/socket.io@4.7.2/client-dist/socket.io.min.js"></script>
+<script src="/static/chat.js"></script>
+
 </body>
 </html>

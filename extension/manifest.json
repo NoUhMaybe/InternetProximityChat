@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Domain Chat",
+  "name": "Internet Proximity Chat",
   "version": "1.0",
   "description": "Chat with people on the same domain!",
   "permissions": ["tabs", "scripting"],

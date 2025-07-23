@@ -17,3 +17,7 @@ class RoomManager:
 
     def get_users(self, domain):
         return self.rooms.get(domain, set())
+    
+    def get_user_count(self, domain):
+        return len(self.rooms.get(domain, []))
+

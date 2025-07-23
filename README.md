@@ -8,24 +8,25 @@ A Chrome extension and Python backend that enables users visiting the same domai
 
 ```
 InternetProximityChat-main/
-│
-├── app.py
-├── message_router.py
-├── room_manager.py
-├── user_tracker.py
-├── encryption_utils.py
-├── templates/
-│   └── chat.html
-├── static/
-│   ├── chat.js
-│   └── socket.io.min.js
+├── server/
+│   ├── venv/
+│   │   └── [your virtual enviornment files]
+│   ├── __pycache__/
+│   │   └── [your python cache files]
+│   ├── static/
+│   │   └── chat.js
+│   ├── template/
+│   │   └── chat.html
+│   ├── app.py
+│   ├── message_router.py
+│   ├── user_tracker.py
+│   ├── encryption_utils.py
+│   ├── room_manager.py
 ├── extension/
 │   ├── manifest.json
 │   ├── popup.html
 │   ├── popup.js
 │   └── background.js
-├── venv/
-│   └── (your virtual environment files)
 └── README.md
 ```
 
@@ -54,6 +55,7 @@ cd InternetProximityChat-main
 ```powershell
 python -m venv venv
 .venv\Scripts\activate
+(If prompted to allow venv virtual environment you have to agree in order for program to run)
 ```
 
 ### 3. Install Python dependencies:
@@ -75,10 +77,11 @@ This will start the Flask-SocketIO server at `http://0.0.0.0:5000`. Make sure th
 
 ## Load the Chrome Extension
 
-1. Open Chrome and go to `chrome://extensions/`
-2. Enable **Developer Mode**
-3. Click **Load unpacked** and select the `/extension` folder
-4. Ensure `manifest.json` and all necessary files are inside the folder
+1. Change the IP's in 'popup.js' and 'background.js' to reflect the IP of the server or computer you are running the server side on
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable **Developer Mode**
+4. Click **Load unpacked** and select the `/extension` folder
+5. Ensure `manifest.json` and all necessary files are inside the folder
 
 ---
 
